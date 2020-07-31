@@ -116,10 +116,10 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  backgroundmd.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  publicationmd.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/background.js`),
+      component: path.resolve(`./src/templates/publication.js`),
       context: {
         slug: node.fields.slug,
       },
