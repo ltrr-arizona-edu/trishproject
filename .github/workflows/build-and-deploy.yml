@@ -23,12 +23,12 @@ jobs:
         run: npm install
 
       - name: Build the static site directory tree
-        run: npm build
+        run: npm run build
 
       - name: Deploy to production server
         run: |
           echo ${{secrets.WEBCI_KEY}} > /tmp/webcikey
           chmod 600 /tmp/webcikey
-          rsync -avc --delete -e 'ssh -i /tmp/webcikey -o StrictHostKeyChecking=no' ./public/ webci@trishproject.org:/home/webci/www
+          rsync -avc --delete -e 'ssh -i /tmp/webcikey -o StrictHostKeyChecking=no' './public/' 'webci@trishproject.org:/home/webci/www'
           rm /tmp/webcikey
 
