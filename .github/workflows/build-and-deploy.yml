@@ -26,8 +26,10 @@ jobs:
         run: npm run build
 
       - name: Deploy to production server
+        env:
+          WEBCI_KEY: ${{secrets.WEBCI_KEY}}
         run: |
-          echo ${{secrets.WEBCI_KEY}} > /tmp/webcikey
+          echo "$WEBCI_KEY" > /tmp/webcikey
           chmod 600 /tmp/webcikey
           rsync -avc --rsh="ssh -i /tmp/webcikey -o StrictHostKeyChecking=no"  --delete ./public/ webci@trishproject.org::websync
           rm /tmp/webcikey
