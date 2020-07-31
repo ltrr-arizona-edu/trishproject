@@ -1,0 +1,34 @@
+name: Build and deploy static site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Build & deploy
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup a specific Nodejs environment
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12.18'
+
+      - name: Configure Gatsby (populates node_modules, takes forever)
+        run: npm install
+
+      - name: Build the static site directory tree
+        run: npm build
+
+      - name: Deploy to production server
+        run: |
+          echo ${{secrets.WEBCI_KEY}} > /tmp/webcikey
+          chmod 600 /tmp/webcikey
+          rsync -avc --delete -e 'ssh -i /tmp/webcikey -o StrictHostKeyChecking=no' ./public/ webci@trishproject.org:/home/webci/www
+          rm /tmp/webcikey
+
