@@ -29,6 +29,6 @@ jobs:
         run: |
           echo ${{secrets.WEBCI_KEY}} > /tmp/webcikey
           chmod 600 /tmp/webcikey
-          rsync -avc --delete -e 'ssh -i /tmp/webcikey -o StrictHostKeyChecking=no' './public/' 'webci@trishproject.org:/home/webci/www'
+          rsync -avc --rsh="ssh -i /tmp/webcikey -o StrictHostKeyChecking=no"  --delete ./public/ webci@trishproject.org::websync
           rm /tmp/webcikey
 
