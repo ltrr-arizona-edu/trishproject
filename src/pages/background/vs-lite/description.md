@@ -1,6 +1,6 @@
 ---
 title: "Selected Sites (with the VS-Lite Model)"
-weight: 4
+weight: 5
 primaryimage: "./figure2.png"
 ---
 

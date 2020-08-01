@@ -1,6 +1,6 @@
 ---
 title: "Tree-Ring Sites"
-weight: 3
+weight: 4
 primaryimage: "./figure1.png"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Tree-Ring Proxies"
-weight: 2
+weight: 3
 ---
 
 Heat transported by the Yenisei River depends on both water
