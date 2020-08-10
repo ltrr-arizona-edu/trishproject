@@ -26,7 +26,7 @@ timing of snowmelt, and melting of permafrost. Changes in
 vegetation associated with the warming trend also trigger
 changes in carbon storage, alteration of runoff patterns, and
 forest fire that impact the YRB flux of water and energy into
-the Arctic Ocean. 
+the Arctic Ocean.
 
 Map showing GCM projections of changes in prescription and
 temperature (top) and annual total precipitation (bottom) in

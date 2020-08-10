@@ -9,4 +9,4 @@ tree-ring networks across the Yenisei River Basin, and
 ultimately to the TRISH online tool. In addition to that you
 would find links to download the latest papers resulted from
 this research project. The publications are organized by the
-topics and the year of publishing. 
+topics and the year of publishing.

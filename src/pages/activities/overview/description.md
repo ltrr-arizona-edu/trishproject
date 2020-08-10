@@ -12,4 +12,4 @@ latitude. Project activities are centered around
 2) Hydrological modeling,
 3) TRISH Tool devilment and
 4) Training and Outreach, and
-5) International Collaboration Services. 
+5) International Collaboration Services.

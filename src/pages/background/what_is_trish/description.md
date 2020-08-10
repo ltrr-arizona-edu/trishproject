@@ -8,7 +8,7 @@ TRISH stands for Tree-Ring Integrated System for Hydrology.
 This is U.S. NSF Funded project (Office of Polar Programs)
 located in two research centers: Laboratory of Tree-Ring
 Research, University of Arizona and Earth Systems Research
-Center, University of New Hampshire. 
+Center, University of New Hampshire.
 
 While the Yenisei River is the direct focus of the research, a
 broad goal is an extension of the approach, methods, and tools
