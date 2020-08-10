@@ -19,7 +19,7 @@ const WebtoolLink = () => {
     <Img className="card-img-top" alt="Icon: web tool screenshot" fluid={data.placeholderImage.childImageSharp.fluid} />
     <div className="card-body">
       <h5 className="card-title">Data Exploration and Mapping</h5>
-      <p className="card-text">The Univesity of New Hampshire hosts the project's open-access online tool.</p>
+      <p className="card-text">The University of New Hampshire hosts the project's open-access online tool.</p>
       <a href="https://trish.sr.unh.edu/maps/" className="btn btn-red">Start</a>
     </div>
   </div>
