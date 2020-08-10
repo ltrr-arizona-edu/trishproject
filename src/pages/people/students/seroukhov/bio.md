@@ -1,7 +1,7 @@
 ---
-name: "Misha S. Seroukhov"
-affiliation: "Undergrad, xx"
+name: "Michael Seroukhov"
+affiliation: "Undergrad, LTRR University of Arizona"
 portrait: "portrait.png"
 ---
 
-TBA
+
