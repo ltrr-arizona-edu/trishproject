@@ -15,7 +15,7 @@ uniform interfaces for data access that look familiar and 2)
 a visualization kit to plot and map the archived series before
 downloading or modeling. We also intend to provide data
 that meet users’ research or application requirements with
-respect to the data format, projection, model grid, 
+respect to the data format, projection, model grid,
 spatiotemporal resolution and etc.
 
 At this early stage of the TRISH development, we encourage
