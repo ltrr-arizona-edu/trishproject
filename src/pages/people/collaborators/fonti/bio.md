@@ -1,7 +1,7 @@
 ---
 name: "Marina Fonti (Skomarkova)"
 affiliation: "SBRAS Institute of Forest, Russia"
-portrait: "portrait.png"
+portrait: "portrait.jpg"
 ---
 
 I am a biologist and dendrochronologist specializing in wood chemistry
