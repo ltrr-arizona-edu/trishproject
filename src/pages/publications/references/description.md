@@ -1,14 +1,14 @@
 ---
-title: "Literature Cited"
+title: "References by Category"
 weight: 2
 ---
 
 #### Arctic Fresh Water Hydrology and RIMS
 
-References: [PDF Link]()
+[References]()
 
 #### Tree-Ring Proxies of YRB Hydroclimate
 
-References: [PDF Link]()
+[References]()
 
-Methods: [PDF Link]()
+[Methods]()
