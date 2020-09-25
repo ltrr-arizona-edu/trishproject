@@ -1,7 +1,7 @@
 ---
 name: "Leonid Agafonov"
 affiliation: "RAS Institute of Animal and Plant Ecology, Russia"
-portrait: "portrait.png"
+portrait: "portrait.jpg"
 ---
 
 I am a forest ecologist specializing in studies of boreal forest
