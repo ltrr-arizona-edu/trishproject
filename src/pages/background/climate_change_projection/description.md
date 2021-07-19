@@ -6,16 +6,16 @@ primaryimage: "./map_gcm_projection.png"
 
 The increasing concentration of greenhouse gases is projected to
 contribute an additional Arctic warming of about 4–7°C over the
-next 100 years. The warming trend strongly influence the
-evaporation and snowmelt regimes at the YRB, and in combination
-with precipitation change alters freshwater inflow to the Arctic
+next 100 years. The warming trend strongly influences the
+evaporation and snowmelt regimes at the YRB, and, in combination
+with precipitation change, alters freshwater inflow to the Arctic
 Ocean. The Yenisei River contributes 22% of the average annual
 freshwater inflow to the Arctic Ocean, which impacts changes in
-sea ice (e.g., albedo) and deep ocean circulation. GCM
-projections suggest increasing concentration of greenhouse gases
-and leads to strong warming combined with precipitation increase
+sea ice (e.g., albedo) and deep ocean circulation. Global Circulation
+Modeling (GCM) projections suggest increasing concentration of greenhouse 
+gases and leads to strong warming combined with precipitation increase
 in the YRB by the end of the 21st century (see GCM map). Many
-studies point to increase of annual mean discharge (up to 15.6%)
+studies point to an increase of annual mean discharge (up to 15.6%)
 by the end of the 21st century, with a shift to an earlier
 seasonal peak discharge because of earlier snowmelt. The
 projected increase in discharge is associated with increases in
