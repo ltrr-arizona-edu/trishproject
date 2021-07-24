@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import InteriorPage from "../components/interiorpage"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Background({ data }) {
   const entry = data.markdownRemark
   return (
     <InteriorPage>
-      <SEO title={entry.frontmatter.title} description={entry.excerpt} />
+      <Seo title={entry.frontmatter.title} description={entry.excerpt} />
       <div className="container">
         <div className="row">
           <div className="col-md-12">

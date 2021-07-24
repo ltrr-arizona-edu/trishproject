@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import InteriorPage from "../components/interiorpage"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Person({ data }) {
   const entry = data.markdownRemark
   return (
     <InteriorPage>
-      <SEO title={entry.frontmatter.name} description={entry.excerpt} />
+      <Seo title={entry.frontmatter.name} description={entry.excerpt} />
       <div className="container">
         <div className="row">
           <div className="col-md-8">

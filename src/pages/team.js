@@ -4,23 +4,23 @@ import PrincipalInvestigators from "../components/principal_investigators"
 import Investigators from "../components/investigators"
 import Students from "../components/students"
 import Collaborators from "../components/collaborators"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
-export default function () {
-  return (
-    <InteriorPage>
-      <SEO title="Team" />
-      <div className="container">
-        <div className="row">
-          <div className="col-md-8">
-            <h1>Team</h1>
-            <PrincipalInvestigators />
-            <Investigators />
-            <Students />
-            <Collaborators />
-          </div>
+const TeamPage = () => (
+  <InteriorPage>
+    <Seo title="Team" />
+    <div className="container">
+      <div className="row">
+        <div className="col-md-8">
+          <h1>Team</h1>
+          <PrincipalInvestigators />
+          <Investigators />
+          <Students />
+          <Collaborators />
         </div>
       </div>
-    </InteriorPage>
-  )
-}
+    </div>
+  </InteriorPage>
+)
+
+export default TeamPage

@@ -2,11 +2,11 @@ import React from "react"
 import LandingPage from "../components/landingpage"
 import WebtoolLink from "../components/webtool_link"
 import ActivitiesHighlighted from "../components/activities_highlighted"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const IndexPage = () => (
   <LandingPage>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <div className="container">
       <div className="row">
         <div className="col-md-8">
