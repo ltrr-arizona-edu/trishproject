@@ -1,34 +1,34 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function BackgroundAll() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(filter: {fields: {slug: {regex: "^/background/"}}}, sort: {fields: frontmatter___weight}) {
-        edges {
-          node {
-            id
-            html
-            fields {
-              slug
+  const data = useStaticQuery(graphql`{
+  allMarkdownRemark(
+    filter: {fields: {slug: {regex: "^/background/"}}}
+    sort: {fields: frontmatter___weight}
+  ) {
+    edges {
+      node {
+        id
+        html
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          primaryimage {
+            childImageSharp {
+              gatsbyImageData(width: 960, layout: CONSTRAINED)
             }
-            frontmatter {
-              title
-              primaryimage {
-                childImageSharp {
-                  fluid(maxWidth: 960) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-                base
-              }    
-            }
+            base
           }
         }
       }
     }
-  `)
+  }
+}
+`)
 
   return (
     <div>
@@ -38,12 +38,11 @@ export default function BackgroundAll() {
             <div key={node.id}>
               <h2>{node.frontmatter.title}</h2>
               <div dangerouslySetInnerHTML={{ __html: node.html }} />
-              <Img
-                fluid={node.frontmatter.primaryimage.childImageSharp.fluid}
-                alt={node.frontmatter.primaryimage.base}
-              />
+              <GatsbyImage
+                image={node.frontmatter.primaryimage.childImageSharp.gatsbyImageData}
+                alt={node.frontmatter.primaryimage.base} />
             </div>
-          )}
+          );}
         return (
           <div key={node.id}>
             <h2>{node.frontmatter.title}</h2>
@@ -52,5 +51,5 @@ export default function BackgroundAll() {
         )
       })}
     </div>
-  )
+  );
 }

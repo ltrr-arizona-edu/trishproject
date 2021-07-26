@@ -1,34 +1,33 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function PrincipalInvestigators() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(filter: {fields: {slug: {regex: "^/people/principal_investigators/"}}}) {
-        edges {
-          node {
-            fields {
-              slug
+  const data = useStaticQuery(graphql`{
+  allMarkdownRemark(
+    filter: {fields: {slug: {regex: "^/people/principal_investigators/"}}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          affiliation
+          name
+          portrait {
+            childImageSharp {
+              gatsbyImageData(width: 188, layout: FIXED)
             }
-            frontmatter {
-              affiliation
-              name
-              portrait {
-                childImageSharp {
-                  fixed(width: 188) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }    
-            }
-            excerpt
-            id
           }
         }
+        excerpt
+        id
       }
     }
-  `)
+  }
+}
+`)
 
   return (
     <div>
@@ -37,7 +36,7 @@ export default function PrincipalInvestigators() {
         <div key={node.id}>
           <h3>{node.frontmatter.name}</h3>
           <p>({node.frontmatter.affiliation})</p>
-          <Img fixed={node.frontmatter.portrait.childImageSharp.fixed} />
+          <GatsbyImage image={node.frontmatter.portrait.childImageSharp.gatsbyImageData} />
           <p>
             {node.excerpt}{" "}
             <Link to={node.fields.slug}>More</Link>
@@ -45,5 +44,5 @@ export default function PrincipalInvestigators() {
         </div>
       ))}
     </div>
-  )
+  );
 }

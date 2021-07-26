@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import InteriorPage from "../components/interiorpage"
 import Seo from "../components/seo"
 
@@ -14,31 +14,28 @@ export default function Person({ data }) {
           <div className="col-md-8">
             <h1>{entry.frontmatter.name}</h1>
             <h2>({entry.frontmatter.affiliation})</h2>
-            <Img fixed={entry.frontmatter.portrait.childImageSharp.fixed} />
+            <GatsbyImage image={entry.frontmatter.portrait.childImageSharp.gatsbyImageData} />
             <div dangerouslySetInnerHTML={{ __html: entry.html }} />
           </div>
         </div>
       </div>
     </InteriorPage>
-  )
+  );
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        name
-        affiliation
-        portrait {
-          childImageSharp {
-            fixed(width: 188) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }    
+export const query = graphql`query ($slug: String!) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    frontmatter {
+      name
+      affiliation
+      portrait {
+        childImageSharp {
+          gatsbyImageData(width: 188, layout: FIXED)
+        }
       }
-      excerpt
     }
+    excerpt
   }
+}
 `
