@@ -1,22 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image"
 
-const UazLogo = () => {
-  const uazlogo = useStaticQuery(graphql`{
-  placeholderImage: file(relativePath: {eq: "images/uaz_ltrr_logo_white.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 348, layout: FIXED)
-    }
-  }
-}
-`)
-
-return (
-  <GatsbyImage
-    image={uazlogo.placeholderImage.childImageSharp.gatsbyImageData}
-    alt="LTRR, University of Arizona" />
-);
-}
+const UazLogo = () => (
+  <StaticImage
+    src="../images/uaz_ltrr_logo_white.png"
+    alt="LTRR, University of Arizona"
+    layout="fixed"
+    width={348} />
+)
 
 export default UazLogo
