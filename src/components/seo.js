@@ -69,7 +69,9 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
       >
-        <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/master/css/arizona-bootstrap.min.css" crossorigin="anonymous"></link>
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp" rel="stylesheet"></link>
+        <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous"></link>
+        <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.11/css/arizona-bootstrap.min.css" crossorigin="anonymous"></link>
       </Helmet>
       
   )
