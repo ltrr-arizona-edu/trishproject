@@ -1,34 +1,31 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Collaborators() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(filter: {fields: {slug: {regex: "^/people/collaborators/"}}}) {
-        edges {
-          node {
-            fields {
-              slug
+  const data = useStaticQuery(graphql`{
+  allMarkdownRemark(filter: {fields: {slug: {regex: "^/people/collaborators/"}}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          affiliation
+          name
+          portrait {
+            childImageSharp {
+              gatsbyImageData(width: 188, layout: FIXED)
             }
-            frontmatter {
-              affiliation
-              name
-              portrait {
-                childImageSharp {
-                  fixed(width: 188) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }    
-            }
-            excerpt
-            id
           }
         }
+        excerpt
+        id
       }
     }
-  `)
+  }
+}
+`)
 
   return (
     <div>
@@ -37,7 +34,7 @@ export default function Collaborators() {
         <div key={node.id}>
           <h3>{node.frontmatter.name}</h3>
           <p>({node.frontmatter.affiliation})</p>
-          <Image fixed={node.frontmatter.portrait.childImageSharp.fixed} />
+          <GatsbyImage image={node.frontmatter.portrait.childImageSharp.gatsbyImageData} />
           <p>
             {node.excerpt}{" "}
             <Link to={node.fields.slug}>More</Link>
@@ -45,5 +42,5 @@ export default function Collaborators() {
         </div>
       ))}
     </div>
-  )
+  );
 }

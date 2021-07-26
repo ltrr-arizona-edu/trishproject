@@ -1,34 +1,29 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types"
 
 import Banner from "./banner"
 import Footer from "./footer"
 
 const LandingPage = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "images/dam_and_trees.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 3712) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  placeholderImage: file(relativePath: {eq: "images/dam_and_trees.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
 
-  return (
-    <>
-      <Banner />
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-      <div>
-        <main>{children}</main>
-        <Footer copyrightDate={(new Date().getFullYear()).toString()} />
-      </div>
-    </>
-  )
+  return <>
+    <Banner />
+    <GatsbyImage image={data.placeholderImage.childImageSharp.gatsbyImageData} />
+    <div>
+      <main>{children}</main>
+      <Footer copyrightDate={(new Date().getFullYear()).toString()} />
+    </div>
+  </>;
 }
 
 LandingPage.propTypes = {
