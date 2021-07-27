@@ -8,16 +8,16 @@ on:
 jobs:
   deploy:
     name: Build & deploy
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup a specific Nodejs environment
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.18'
+          node-version: '14.17'
 
       - name: Configure Gatsby (populates node_modules, takes forever)
         run: npm install
