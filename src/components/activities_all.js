@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 export default function ActivitiesAll() {
   const data = useStaticQuery(graphql`
@@ -8,7 +8,7 @@ export default function ActivitiesAll() {
         edges {
           node {
             id
-            html
+            excerpt
             fields {
               slug
             }
@@ -26,6 +26,10 @@ export default function ActivitiesAll() {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <h2>{node.frontmatter.title}</h2>
+          <p>
+            {node.excerpt}{" "}
+            <Link to={node.fields.slug}>More</Link>
+          </p>
           <div dangerouslySetInnerHTML={{ __html: node.html }} />
         </div>
       ))}

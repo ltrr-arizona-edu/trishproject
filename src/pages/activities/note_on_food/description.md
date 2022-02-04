@@ -1,6 +1,6 @@
 ---
 title: "Note on Food"
-weight: 2
+weight: 9
 highlighted: false
 ---
 ![Mushrooms](./mushrooms_detail.jpg)
