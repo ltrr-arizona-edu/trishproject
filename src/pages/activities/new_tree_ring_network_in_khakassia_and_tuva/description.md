@@ -1,6 +1,6 @@
 ---
 title: "New tree-ring network in Khakassia and Tuva"
-weight: 1
+weight: 10
 highlighted: true
 ---
 
