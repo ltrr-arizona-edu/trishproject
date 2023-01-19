@@ -10,7 +10,7 @@ const WebtoolLink = () => (
       layout="constrained"
       width={214} />
     <div className="card-body">
-      <h5 className="card-title">Data Exploration and Mapping</h5>
+      <h5 className="card-title">Old Data Exploration and Mapping</h5>
       <p className="card-text">The University of New Hampshire hosts the project's open-access online tool.</p>
       <a href="https://trish.sr.unh.edu/maps/" className="btn btn-red">Start</a>
     </div>
